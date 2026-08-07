@@ -1,1 +1,8 @@
+The organization is a busy hospital where clinical staff rely heavily on functioning technology to deliver patient care. Currently, the reporting of broken equipment and software is fragmented and disorganized, leading to long wait times for IT support. This database attempts to solve the problem by providing a centralized system to report, track and manage IT issues, directly benefiting IT Technicians, Care Providers and Hospital Administrators by minimizing downtime. Reducing technical downtime, increasing commutation with IT support, and analyzing repeated clinical issues within the hospital, will ultimately trickle down and help improve the Triple Aim for Healthcare: enhancing patient experience of care, improving population health and reducing overall healthcare costs. 
+
+The database consists of five core relational tables: Departments, Employees, Machines, Priority, and Tickets.
+
+A key design decision was separating Priority and Departments into dedicated lookup tables, which enforces data integrity and standardizes hospital workflows. Additionally, establishing a One-to-Many relationship between Machines and Tickets allows administrators to easily track equipment reliability and identify frequently failing assets.
+
+The primary challenge was structuring the core transactional data so that tickets link to both the reporting employee and the affected machine. By utilizing precise Foreign Key constraints across all five tables, the system maintains complete relational integrity, ensuring smooth multi-user collaboration and accurate historical tracking for hospital IT operations. 
 
